@@ -1,2 +1,283 @@
-/* Project 1: write all of your styles in this file.
-   Follow the layout, font and colour guide in the project brief. */
+
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1A202C;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Headings and logo */
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Fraunces", Georgia, serif;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Header and navigation */
+.site-header {
+    border-bottom: 1px solid #E2E8F0;
+    padding: 16px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #2D3748;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2F855A;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #2F855A;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #276749;
+}
+
+/* Hero section */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+/* Features section */
+.features h2 {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature {
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #F7FAFC;
+}
+
+/* Visit section */
+.visit .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hours {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours caption,
+.hours th,
+.hours td {
+    text-align: left;
+}
+
+.hours th,
+.hours td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #C6F6D5;
+}
+
+.hours th {
+    background-color: #2F855A;
+    color: white;
+}
+
+.testimonial {
+    padding: 32px;
+    background-color: white;
+    border-left: 6px solid #2F855A;
+    border-radius: 0 8px 8px 0;
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.testimonial footer {
+    margin-top: 16px;
+    color: #4A5568;
+    font-size: 16px;
+    font-style: normal;
+}
+
+/* Signup section */
+.signup h2,
+.signup > .container > p {
+    text-align: center;
+}
+
+#signup-form {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #A0AEC0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"] {
+    border: 2px solid #C53030;
+}
+
+.error {
+    color: #C53030;
+    font-size: 15px;
+    min-height: 24px;
+    margin: 4px 0 0;
+}
+
+#signup-form .btn {
+    width: 100%;
+}
+
+#form-message.success {
+    background-color: #C6F6D5;
+    color: #22543D;
+    font-weight: bold;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 520px;
+    margin: 20px auto;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #22543D;
+    color: white;
+    padding: 32px 0;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 48px 0;
+    }
+
+    .site-header .container,
+    .site-footer .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero .container,
+    .feature-list,
+    .visit .container {
+        grid-template-columns: 1fr;
+    }
+}
+
